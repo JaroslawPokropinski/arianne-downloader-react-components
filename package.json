@@ -1,4 +1,17 @@
 {
+  "name": "arianne-downloader-react-components",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaroslawPokropinski/arianne-downloader-react-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaroslawPokropinski/arianne-downloader-react-components/issues"
+  },
+  "homepage": "https://github.com/JaroslawPokropinski/arianne-downloader-react-components#readme",
+  "description": "",
   "scripts": {
     "start": "start-storybook -p 6006",
     "rollup": "rollup -c",
