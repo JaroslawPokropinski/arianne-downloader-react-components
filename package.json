@@ -15,7 +15,7 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "rollup": "rollup -c",
-    "build-storybook": "build-storybook"
+    "postinstall": "rollup -c"
   },
   "dependencies": {
     "antd": "^4.23.6",
