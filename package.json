@@ -5,11 +5,11 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.0",
     "antd": "^4.23.6",
-    "graphql": "^16.6.0"
+    "react-collapsed": "^3.5.0"
   },
   "devDependencies": {
+    "@apollo/client": "^3.7.1",
     "@babel/core": "^7.19.6",
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
@@ -27,6 +27,7 @@
     "@types/react": "^18.0.23",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.2.3",
