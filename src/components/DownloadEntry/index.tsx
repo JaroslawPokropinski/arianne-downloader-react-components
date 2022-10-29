@@ -3,7 +3,7 @@ import { FileDownload, showFile } from "utils/fetchUtils";
 import { Button, Divider, Progress, Space } from "antd";
 import { FileOutlined } from "@ant-design/icons";
 import useCollapse from "react-collapsed";
-import "styles.scss";
+import "./styles.css";
 
 export default function DownloadEntry({
   file,

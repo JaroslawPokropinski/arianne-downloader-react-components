@@ -1,7 +1,5 @@
 'use strict';
 
-require('styles.scss');
-
 function _mergeNamespaces(n, m) {
     m.forEach(function (e) {
         e && typeof e !== 'string' && !Array.isArray(e) && Object.keys(e).forEach(function (k) {
@@ -47238,6 +47236,36 @@ function warning(condition, message) {
 
 function u(){return u=Object.assign||function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o]);}return e},u.apply(this,arguments)}function c(e,n){if(null==e)return {};var t,o,r={},i=Object.keys(e);for(o=0;o<i.length;o++)n.indexOf(t=i[o])>=0||(r[t]=e[t]);return r}var d=function(){};function s(e){return null!=e&&e.current?e.current.scrollHeight:(warning(!0,"useCollapse was not able to find a ref to the collapse element via `getCollapseProps`. Ensure that the element exposes its `ref` prop. If it exposes the ref prop under a different name (like `innerRef`), use the `refKey` property to change it. Example:\n\n{...getCollapseProps({refKey: 'innerRef'})}"),"auto")}var f=function(){var e=arguments;return function(){var n=arguments;return [].slice.call(e).forEach(function(e){return e&&e.apply(void 0,[].slice.call(n))})}};function p(e,n){if(null!=e)if("function"==typeof e)e(n);else try{e.current=n;}catch(t){throw new Error('Cannot assign value "'+n+'" to ref "'+e+'"')}}var h="undefined"!=typeof window?react.exports.useLayoutEffect:react.exports.useEffect,v=!1,g=0,m=function(){return ++g},x=react.exports.useId,y=["duration","easing","collapseStyles","expandStyles","onExpandStart","onExpandEnd","onCollapseStart","onCollapseEnd","isExpanded","defaultExpanded","hasDisabledAnimation"],E=["disabled","onClick"],b=["style","onTransitionEnd","refKey"];function C(e){var i,g,C=void 0===e?{}:e,w=C.duration,S=C.easing,k=void 0===S?"cubic-bezier(0.4, 0, 0.2, 1)":S,A=C.collapseStyles,O=void 0===A?{}:A,P=C.expandStyles,T=void 0===P?{}:P,q=C.onExpandStart,D=void 0===q?d:q,F=C.onExpandEnd,K=void 0===F?d:F,j=C.onCollapseStart,I=void 0===j?d:j,N=C.onCollapseEnd,z=void 0===N?d:N,H=C.isExpanded,M=C.defaultExpanded,R=void 0!==M&&M,B=C.hasDisabledAnimation,V=void 0!==B&&B,_=c(C,y),G=function(e,i){var l=react.exports.useState(i||!1),u=l[0],c=l[1],d=react.exports.useRef(null!=e),s=d.current?e:u,f=react.exports.useCallback(function(e){d.current||c(e);},[]);return react.exports.useEffect(function(){warning(!(d.current&&null==e),"useCollapse is changing from controlled to uncontrolled. useCollapse should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled collapse for the lifetime of the component. Check the `isExpanded` prop."),warning(!(!d.current&&null!=e),"useCollapse is changing from uncontrolled to controlled. useCollapse should not switch from uncontrolled to controlled (or vice versa). Decide between using a controlled or uncontrolled collapse for the lifetime of the component. Check the `isExpanded` prop.");},[e]),[s,f]}(H,R),J=G[0],L=G[1],Q=void 0!==x?x():function(e){var t=v?m():null,o=react.exports.useState(t),i=o[0],l=o[1];return h(function(){null===i&&l(m());},[]),react.exports.useEffect(function(){!1===v&&(v=!0);},[]),null!=i?String(i):void 0}(),U=react.exports.useRef(null);i=U,g=function(e){},"production"!==process.env.NODE_ENV&&(g=function(e){if(null!=e&&e.current){var n=window.getComputedStyle(e.current),t=n.paddingTop,o=n.paddingBottom;warning(!(t&&"0px"!==t||o&&"0px"!==o),"react-collapsed: Padding applied to the collapse element will cause the animation to break and not perform as expected. To fix, apply equivalent padding to the direct descendent of the collapse element.");}}),react.exports.useEffect(function(){g(i);},[i]);var W,X,Y,Z=(_.collapsedHeight||0)+"px",$={display:"0px"===Z?"none":"block",height:Z,overflow:"hidden"},ee=react.exports.useState(J?{}:$),ne=ee[0],te=ee[1],oe=function(e){reactDom.exports.flushSync(function(){te(e);});},re=function(e){oe(function(n){return u({},n,e)});};function ie(e){if(V)return {};var n=w||function(e){if(!e||"string"==typeof e)return 0;var n=e/36;return Math.round(10*(4+15*Math.pow(n,.25)+n/5))}(e);return {transition:"height "+n+"ms "+k}}W=function(){J?requestAnimationFrame(function(){D(),re(u({},T,{willChange:"height",display:"block",overflow:"hidden"})),requestAnimationFrame(function(){var e=s(U);re(u({},ie(e),{height:e}));});}):requestAnimationFrame(function(){I();var e=s(U);re(u({},O,ie(e),{willChange:"height",height:e})),requestAnimationFrame(function(){re({height:Z,overflow:"hidden"});});});},X=[J,Z],Y=react.exports.useRef(!0),react.exports.useEffect(function(){if(!Y.current)return W();Y.current=!1;},X);var le=function(e){if(e.target===U.current&&"height"===e.propertyName)if(J){var n=s(U);n===ne.height?oe({}):re({height:n}),K();}else ne.height===Z&&(oe($),z());};return {getToggleProps:function(e){var n=void 0===e?{}:e,t=n.disabled,o=void 0!==t&&t,r=n.onClick,i=void 0===r?d:r,l=c(n,E);return u({type:"button",role:"button",id:"react-collapsed-toggle-"+Q,"aria-controls":"react-collapsed-panel-"+Q,"aria-expanded":J,tabIndex:0,disabled:o},l,{onClick:o?d:f(i,function(){return L(function(e){return !e})})})},getCollapseProps:function(e){var n,t=void 0===e?{}:e,o=t.style,r=void 0===o?{}:o,i=t.onTransitionEnd,l=void 0===i?d:i,a=t.refKey,s=void 0===a?"ref":a,h=c(t,b);return u({id:"react-collapsed-panel-"+Q,"aria-hidden":!J},h,((n={})[s]=function(){var e=[].slice.call(arguments);return e.every(function(e){return null==e})?null:function(n){e.forEach(function(e){p(e,n);});}}(U,h[s]),n.onTransitionEnd=f(le,l),n.style=u({boxSizing:"border-box"},r,ne),n))},isExpanded:J,setExpanded:L}}
 
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css_248z$1 = ".download-entry {\r\n\r\n  user-select: none;\r\n  background-color: ghostwhite;\r\n  border-radius: 8px;\r\n  padding: 8px;\r\n\r\n  /* .entry-desc {\r\n    display: flex;\r\n    flex-direction: row;\r\n  }\r\n\r\n  .entry-icon {\r\n    width: 40px;\r\n    flex-shrink: 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    margin-right: 16px;\r\n  }\r\n\r\n  .entry-info{\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n  }\r\n\r\n  .file-name {\r\n    height: 3rem;\r\n    overflow: hidden;\r\n    word-wrap: break-word;\r\n    word-break: break-all;\r\n  } */\r\n}";
+styleInject(css_248z$1);
+
 function DownloadEntry(_a) {
     var file = _a.file, _b = _a.expanded, expanded = _b === void 0 ? false : _b, onClick = _a.onClick;
     var getCollapseProps = C({
@@ -47279,6 +47307,9 @@ function getMessage(msgKey) {
     var _a, _b, _c;
     return (_c = (_b = (_a = getBrowser()) === null || _a === void 0 ? void 0 : _a.i18n) === null || _b === void 0 ? void 0 : _b.getMessage(msgKey)) !== null && _c !== void 0 ? _c : "__".concat(msgKey, "__");
 }
+
+var css_248z = ".download-list .space {\n  width: 100%;\n}";
+styleInject(css_248z);
 
 function DownloadsList() {
     var data = useQuery(GET_DOWNLOADS, {
