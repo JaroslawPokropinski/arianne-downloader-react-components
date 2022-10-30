@@ -4,7 +4,7 @@ import { GetDownloadsType, GET_DOWNLOADS } from "utils/fetchUtils";
 import DownloadEntry from "components/DownloadEntry";
 import { Empty, Space } from "antd";
 import { getMessage } from "utils/browserUtils";
-import "styles.scss";
+import "./styles.scss";
 
 export default function DownloadsList(): JSX.Element {
   const { data } = useQuery<GetDownloadsType>(GET_DOWNLOADS, {

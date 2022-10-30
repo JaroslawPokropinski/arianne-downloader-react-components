@@ -17,8 +17,13 @@
     "build": "rollup -c"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.19.4",
     "antd": "^4.23.6",
     "react-collapsed": "^3.5.0"
+  },
+  "peerDependencies": {
+    "react": ">18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@apollo/client": "^3.7.1",

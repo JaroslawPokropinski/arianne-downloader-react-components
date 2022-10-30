@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { FileDownload } from "utils/fetchUtils";
-import "./styles.css";
+import "./styles.scss";
 export default function DownloadEntry({ file, expanded, onClick, }: {
     file: FileDownload;
     expanded?: boolean;
